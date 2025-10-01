@@ -9,6 +9,7 @@
     <title>Inicio</title>
 </head>
 <body>
+@include('partials.navigation')
 <h1>Inicio</h1>
 </body>
 </html>
