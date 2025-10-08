@@ -1,16 +1,4 @@
-<!doctype html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0,
-          maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Contacto</title>
-</head>
-<body>
-@include('partials.navigation')
-<h1>Contacto</h1>
-</body>
-</html>
-
+<x-layout meta-title="Contacto"
+          meta-description="Descripción de la página de Contacto">
+    <h1>Contacto</h1>
+</x-layout>
