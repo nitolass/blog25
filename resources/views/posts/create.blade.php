@@ -1,5 +1,10 @@
 <x-layout meta-title="Create new post" meta-description="Form to create a new Post">
     <h1>Create new Post</h1>
+
+    @foreach($errors->all() as $error)
+        <p>{{$error}}</p>
+    @endforeach
+
     <form method="POST" action="{{ route('posts.store') }}">
         @csrf
         <label>
