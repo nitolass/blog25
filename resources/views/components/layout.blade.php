@@ -11,6 +11,13 @@
 </head>
 <body>
     <x-partials.navigation />
+
+    @session('status')
+    <div>
+        {{session('status')}}
+    </div>
+    @endsession
+
 {{$slot}}
 @isset($sidebar)
     <div id="sidebar">

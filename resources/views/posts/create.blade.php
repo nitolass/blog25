@@ -17,3 +17,4 @@
     </form>
     <a href="{{ route('posts.index') }}">Back</a>
 </x-layout>
+
