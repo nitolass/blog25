@@ -25,7 +25,8 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required|min:3',
             'body' => 'required|min:10',
-        ]);
+        ]
+        );
 
         $post = new Post();
         $post-> title = $request->title;
@@ -44,5 +45,14 @@ class PostController extends Controller
     public function show(Post $post)
     {
         return view('posts.show', compact('post'));
+    }
+
+    public function edit(Post $post){
+
+      return view('posts.edit', compact('post'));
+    }
+
+    public function update(){
+        return 'Update post';
     }
 }

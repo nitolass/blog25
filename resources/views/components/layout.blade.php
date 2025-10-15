@@ -21,7 +21,7 @@
 {{$slot}}
 @isset($sidebar)
     <div id="sidebar">
-        <h3>Sidebar</h3>
+        <h3>{{__('Sidebar')}}</h3>
         <div>{{$sidebar}}</div>
     </div>
 @endisset
