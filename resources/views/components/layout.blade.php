@@ -8,6 +8,7 @@
 
     <title>{{ $metaTitle ?? 'Default title' }}</title>
     <meta name="description" content="{{$metaDescription ?? 'Default description'}}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <x-partials.navigation />
