@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,
@@ -10,7 +10,7 @@
     <meta name="description" content="{{$metaDescription ?? 'Default description'}}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body  class="flex h-screen flex-col bg-slate-100 selection:bg-sky-600 selection:text-sky-50 dark:bg-slate-950">
     <x-partials.navigation />
 
     @session('status')
@@ -19,12 +19,23 @@
     </div>
     @endsession
 
-{{$slot}}
-@isset($sidebar)
-    <div id="sidebar">
-        <h3>{{__('Sidebar')}}</h3>
-        <div>{{$sidebar}}</div>
-    </div>
-@endisset
+
+    <main>
+        {{ $slot }}
+    </main>
+
+    <footer class="py-10 px-4">
+        <div
+            class="mx-auto flex max-w-6xl flex-col items-center space-y-4 md:flex-row md:justify-between md:space-y-0"
+        >
+            <div
+                class="text-center text-sm text-slate-600 dark:text-slate-400"
+            >
+                ® 2025 2DAW All Rights Reserved.
+            </div>
+        </div>
+
+    </footer>
+
 </body>
 </html>
