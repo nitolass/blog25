@@ -8,14 +8,15 @@
 
     <title>{{ $metaTitle ?? 'Default title' }}</title>
     <meta name="description" content="{{$metaDescription ?? 'Default description'}}">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body  class="flex h-screen flex-col bg-slate-100 selection:bg-sky-600 selection:text-sky-50 dark:bg-slate-950">
     <x-partials.navigation />
 
     @session('status')
-    <div>
-        {{session('status')}}
+    <div class="bg-green-600 p-4 text-xl text-green-50 dark:bg-green-800 ">
+        {{$value}}
     </div>
     @endsession
 
