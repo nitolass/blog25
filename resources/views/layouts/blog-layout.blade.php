@@ -12,31 +12,30 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body  class="flex h-screen flex-col bg-slate-100 selection:bg-sky-600 selection:text-sky-50 dark:bg-slate-950">
-    <x-partials.navigation />
+@include('layouts.blog-navigation')
+@session('status')
+<div class="bg-green-600 p-4 text-xl text-green-50 dark:bg-green-800 ">
+    {{ $value }}
+</div>
+@endsession
 
-    @session('status')
-    <div class="bg-green-600 p-4 text-xl text-green-50 dark:bg-green-800 ">
-        {{$value}}
-    </div>
-    @endsession
 
+<main>
+    {{ $slot }}
+</main>
 
-    <main>
-        {{ $slot }}
-    </main>
-
-    <footer class="py-10 px-4">
+<footer class="py-10 px-4">
+    <div
+        class="mx-auto flex max-w-6xl flex-col items-center space-y-4 md:flex-row md:justify-between md:space-y-0"
+    >
         <div
-            class="mx-auto flex max-w-6xl flex-col items-center space-y-4 md:flex-row md:justify-between md:space-y-0"
+            class="text-center text-sm text-slate-600 dark:text-slate-400"
         >
-            <div
-                class="text-center text-sm text-slate-600 dark:text-slate-400"
-            >
-                ® 2025 2DAW All Rights Reserved.
-            </div>
+            ® 2025 2DAW All Rights Reserved.
         </div>
+    </div>
 
-    </footer>
+</footer>
 
 </body>
 </html>
